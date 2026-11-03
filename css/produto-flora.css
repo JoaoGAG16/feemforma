@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@import url("comum.css");
+
+.imagem-detalhe-produto img {
+    aspect-ratio: 1.08;
+    object-fit: cover;
+    object-position: center 38%;
+}

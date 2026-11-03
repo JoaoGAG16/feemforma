@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+@import url("comum.css");
+
+.introducao-sobre {
+    padding-top: 62px;
+    padding-bottom: 49px;
+}
+
+.secao-historia {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: clamp(35px, 7vw, 82px);
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 58px 32px;
+}
+
+.imagem-historia {
+    position: relative;
+    margin: 0 12px 13px 0;
+}
+
+.imagem-historia::before {
+    position: absolute;
+    top: 12px;
+    right: -12px;
+    bottom: -13px;
+    left: 12px;
+    border: 3px solid var(--sunshine);
+    border-radius: 28px;
+    content: "";
+}
+
+.imagem-historia img {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.45;
+    border: 6px solid white;
+    border-radius: 28px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgb(40 93 53 / 12%);
+}
+
+.imagem-historia figcaption {
+    position: absolute;
+    right: -5px;
+    bottom: -18px;
+    padding: 9px 14px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: var(--sunshine);
+    color: #354d2e;
+    font-size: 12px;
+    font-weight: 800;
+    transform: rotate(-2deg);
+}
+
+.texto-historia .sobretitulo {
+    margin-bottom: 8px;
+}
+
+.texto-historia h2,
+.secao-artesa h2 {
+    margin-bottom: 14px;
+    font-size: clamp(28px, 3.6vw, 40px);
+}
+
+.texto-historia > p:not(.sobretitulo),
+.secao-artesa > div:last-child > p:last-child {
+    color: #586954;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.secao-artesa {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 1160px;
+    margin: 6px auto 60px;
+    padding: 28px 32px;
+    border-radius: 25px;
+    background: linear-gradient(180deg, #f8f9ef 0%, #eef5e4 100%);
+    box-shadow: 0 8px 20px rgb(69 103 57 / 6%);
+}
+
+.icone-artesa {
+    width: 82px;
+    height: 82px;
+    flex: 0 0 82px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #e8f3d3 0%, #dfeec8 100%);
+}
+
+.secao-artesa .sobretitulo {
+    margin-bottom: 6px;
+}
+
+.secao-artesa h2 {
+    margin-bottom: 8px;
+    font-size: clamp(25px, 3vw, 33px);
+}
+
+.secao-artesa > div:last-child > p:last-child {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 760px) {
+    .secao-historia {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 40px 25px;
+    }
+
+    .imagem-historia {
+        width: calc(100% - 12px);
+        max-width: 600px;
+    }
+
+    .secao-artesa {
+        margin: 0 25px 45px;
+        padding: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .secao-historia {
+        padding: 32px 20px;
+    }
+
+    .secao-artesa {
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0 20px 36px;
+        padding: 20px;
+    }
+
+    .icone-artesa {
+        width: 62px;
+        height: 62px;
+        flex-basis: 62px;
+        font-size: 28px;
+    }
+}

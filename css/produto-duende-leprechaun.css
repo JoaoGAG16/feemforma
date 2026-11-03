@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@import url("comum.css");
+
+.imagem-detalhe-produto img.foto-duende {
+    aspect-ratio: 1.28;
+    object-fit: cover;
+    object-position: center 50%;
+}
